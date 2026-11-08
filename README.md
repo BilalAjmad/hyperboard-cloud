@@ -44,22 +44,6 @@ powershell -ExecutionPolicy Bypass -File .\install.ps1
 
 A **HyperBoard** shortcut appears on your Desktop. Double-click to start.
 
-## Cloud deploy (free, realtime, ads-allowed)
-
-Best free 24/7 option: **Oracle Cloud Always Free** (2 ARM VMs, 4 OCPU, 24GB RAM, forever free).
-
-1. Create an Always Free ARM VM (Ubuntu), open port 3000 in the firewall.
-2. Install Node + pnpm, clone repo, `pnpm install`, `pnpm --filter @hyperboard/client build`.
-3. Set env: `ROOM_SECRET=<32-char-secret>`, `CORS_ORIGINS=*`, `DATA_DIR=/home/ubuntu/data`.
-4. Run: `pm2 start "npx tsx packages/server/src/index.ts" --name hyperboard`.
-5. Frontend (optional, for unlimited bandwidth): deploy `packages/client/dist` to **Cloudflare Pages**, set `VITE_SERVER_URL=http://<vm-ip>:3000` at build.
-
-Simpler (sleeps after idle): **Render** or **Koyeb** — Git deploy, WS supported, free tier, commercial/ads OK.
-
-### Ads
-
-Uncomment the AdSense script in `packages/client/index.html`, replace `ca-pub-XXXX` with your publisher ID, add `<ins class="adsbygoogle">` slots, rebuild + redeploy.
-
 ## Environment variables
 
 | Var | Default | Purpose |
@@ -90,4 +74,4 @@ Uncomment the AdSense script in `packages/client/index.html`, replace `ca-pub-XX
 
 ## License
 
-MIT
+Personal use only. Not for publishing as a hosted website or commercial redistribution. For personal use.
