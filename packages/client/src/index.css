@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body, #root { height: 100%; margin: 0; overflow: hidden; }
+body { font-family: "Inter", system-ui, -apple-system, sans-serif; }
+canvas { touch-action: none; }
+
+/* Hide Excalidraw branding/links */
+.excalidraw a[href*="excalidraw"],
+.excalidraw a[href*="discord"],
+.excalidraw a[href*="github"],
+.excalidraw .brand,
+.excalidraw [class*="brand"] { display: none !important; }
+
+/* Hide the bottom-left brand text container */
+.excalidraw .layer-ui__wrapper > div > div:last-child a,
+.excalidraw footer a { display: none !important; }

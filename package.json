@@ -1,0 +1,23 @@
+{
+  "name": "hyperboard",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Realtime collaborative whiteboard for cloud — create a room, share the code, anyone joins from anywhere",
+  "scripts": {
+    "dev": "pnpm --parallel --filter \"@hyperboard/*\" dev",
+    "dev:server": "pnpm --filter @hyperboard/server dev",
+    "dev:client": "pnpm --filter @hyperboard/client dev",
+    "build": "pnpm --filter @hyperboard/client build",
+    "start": "pnpm --filter @hyperboard/server start",
+    "typecheck": "pnpm -r typecheck",
+    "lint": "pnpm -r lint",
+    "test": "pnpm -r test",
+    "clean": "pnpm -r clean",
+    "install:desktop": "powershell -ExecutionPolicy Bypass -File ./install.ps1"
+  },
+  "engines": {
+    "node": ">=20",
+    "pnpm": ">=9"
+  },
+  "packageManager": "pnpm@12.16.1"
+}
